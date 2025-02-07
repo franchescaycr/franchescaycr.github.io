@@ -1,0 +1,65 @@
+:root {
+    /* Tipografía */
+    --fuente-principal: 'Quicksand', serif, 600;
+    --fuente-secundaria: 'Quicksand', serif, 300;
+
+    /* Colores */
+    --color-principal: #03045e;
+    --color-secundario: #9d4edd;
+}
+
+body {
+    background-image: url('./fondo_.jpg');  
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px 0;
+    color: var(--color-principal);
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--color-principal);
+    margin: 20px;
+}
+
+h2 {
+    font-family: var(--fuente-secundaria);
+    font-weight: 300;
+    color: var(--color-secundario);
+    font-size: 25px;
+    margin: 10px;
+}
+
+#mi-parrafo {
+    font-family: var(--fuente-secundaria);
+    font-weight: 300;
+    font-size: 18px;
+    text-align: left;
+    margin: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6; /* Aumenta el espacio entre líneas para mejorar la legibilidad */
+    white-space: normal; /* Asegúrate de que el espacio en blanco sea interpretado normalmente */
+}
+
+
+
