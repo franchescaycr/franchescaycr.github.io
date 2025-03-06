@@ -2,9 +2,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const projectsSection = document.querySelector('#projects');
     const projects = [
-        {title: 'Registro de Medidas', description: 'Registro de Medidas', link: '/Users/franchescacarrasco/Grafico_medidas/index.html'},
-        { title: 'Mokepon', description: 'Juego', link: 'file:///Users/franchescacarrasco/Desktop/programacion_basica/mokepon/public/index.html' },
-        { title: 'Piedra,Papel y Tijera', description: 'Juego', link: '/Users/franchescacarrasco/Desktop/Juego/index.html' },
+        {title: 'Registro de Medidas', description: 'Registro de Medidas', link: 'https://github.com/franchescaycr/Registro_de_medidas'},
+        { title: 'Mokepon', description: 'Repositorio github mokepon', link: 'https://github.com/franchescaycr/Juego_Mokepon' },
+        { title: 'Piedra,Papel y Tijera', description: 'Repositorio github', link: 'https://github.com/franchescaycr/Juego_piedra_papel_tijera' },
        // { title: 'Proyecto 3', description: 'Descripción del proyecto 3', link: '#' }
     ];
 
