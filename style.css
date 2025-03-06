@@ -15,8 +15,7 @@ body {
     background-repeat: no-repeat; 
     margin: 0;
     padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
+    max-width: 100%;
 }
 
 header, footer {
@@ -61,5 +60,33 @@ h2 {
     white-space: normal; /* Asegúrate de que el espacio en blanco sea interpretado normalmente */
 }
 
+#projects2 {
+    text-align: left; /* Alinear el título a la izquierda */
+    padding-left: 20px;
+}
 
+.ux-ui-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Mantiene dos columnas */
+    gap: 20px; /* Espaciado uniforme */
+    padding: 20px;
+    justify-content: center;
+    align-items: start;
+    
+}
 
+.ux-ui-container iframe {
+    width: 100%;
+    height: 320px; /* Altura uniforme */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    object-fit: cover;
+    
+}
+
+/* Efecto hover */
+.ux-ui-container iframe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
