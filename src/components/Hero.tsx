@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import { ChevronDown, Github, Linkedin } from "lucide-react";
+import { FaBehance } from "react-icons/fa";
 import heroImage from "@/assets/Foto2.jpg";
 
 const Hero = () => {
@@ -49,9 +50,9 @@ const Hero = () => {
                className="text-muted-foreground hover:text-primary transition-colors">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:franchescay.carrasco@gmail.com"
+            <a href="https://www.behance.net/franchescaycr"
                className="text-muted-foreground hover:text-primary transition-colors">
-              <Mail size={24} />
+              <FaBehance size={24} />
             </a>
           </div>
         </div>

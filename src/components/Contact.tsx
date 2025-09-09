@@ -8,9 +8,9 @@ import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
   const { toast } = useToast();
 
@@ -20,13 +20,15 @@ const Contact = () => {
       title: "Mensaje enviado",
       description: "Te contactaré pronto. ¡Gracias por tu interés!",
     });
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: "", email: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -35,20 +37,20 @@ const Contact = () => {
       icon: Mail,
       title: "Email",
       value: "franchescay.carrasco@gmail.com",
-      link: "mailto:franchescay.carrasco@gmail.com"
+      link: "mailto:franchescay.carrasco@gmail.com",
     },
     {
       icon: Phone,
       title: "Teléfono",
       value: "+54 351 2078792",
-      link: "wa.me/+543512078792"
+      link: "wa.me/+543512078792",
     },
     {
       icon: MapPin,
       title: "Ubicación",
       value: "Argentina",
-      link: "#"
-    }
+      link: "#",
+    },
   ];
 
   return (
@@ -59,7 +61,8 @@ const Contact = () => {
             <span className="gradient-text">Contacto</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            ¿Tienes un proyecto en mente? Me encantaría conocer tus ideas y colaborar contigo
+            ¿Tienes un proyecto en mente? Me encantaría conocer tus ideas y
+            colaborar contigo
           </p>
         </div>
 
@@ -69,8 +72,9 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-6">Hablemos</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales. 
-                Ya sea que necesites desarrollo web, diseño UX/UI o consultoría, estaré encantada de ayudarte.
+                Estoy disponible para proyectos freelance, colaboraciones y
+                oportunidades laborales. Ya sea que necesites desarrollo web,
+                diseño UX/UI o consultoría, estaré encantada de ayudarte.
               </p>
             </div>
 
@@ -84,8 +88,10 @@ const Contact = () => {
                       </div>
                       <div>
                         <h4 className="font-medium">{info.title}</h4>
-                        <a 
-                          href={info.link}
+                        <a
+                          href={`https://${info.link}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
                           {info.value}
@@ -103,7 +109,10 @@ const Contact = () => {
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Nombre
                   </label>
                   <Input
@@ -117,7 +126,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Email
                   </label>
                   <Input
@@ -132,7 +144,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Mensaje
                   </label>
                   <Textarea
