@@ -2,10 +2,12 @@ name: Deploy Vite to GH Pages (User Page)
 on:
   push:
     branches: [ main ]
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -15,14 +17,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-      - run: npm ci
+
+      # Si no hay package-lock.json, npm ci falla → usamos install
+      - run: npm install
       - run: npm run build
-      # Si usas React Router, genera también 404.html
+
+      # SPA fallback (opcional)
       - run: cp dist/index.html dist/404.html || true
+
+      # Recomendado por GitHub Pages
+      - uses: actions/configure-pages@v5
+
+      # Sube exactamente el build (paths OK)
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
